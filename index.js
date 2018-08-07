@@ -80,8 +80,10 @@ function basicLong(){
 
 
 function Advanced(){
-
-
+ var number1 = parseInt(prompt("Enter number"));
+ var power = parseInt(prompt("Enter power"));
+ number1 = number1**power;
+ alert(number1);
 }
 function BMI(){
 
