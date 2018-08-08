@@ -148,14 +148,29 @@ function Advanced(){
 
 function BMI(){
   //Users are asked to insert weight and hieght.
-  var weight = parseFloat(prompt("Type in your weight in kg"));
-  var height = parseFloat(prompt("Type in your height in meters"));
-  //It will the calculate the BMI
-  var result = (weight / height) / height;
-  //round it to the nearest decimal place.
-  result = Math.round( result * 10 ) / 10;
-  //Display answer
-  alert(result);
+  var answer = prompt("Would you like to use Imperial(i) or Metric measurements(m)?")
+
+  if(answer == "m" || answer == "metric"){
+    var weight = parseFloat(prompt("Type in your weight in kg"));
+    var height = parseFloat(prompt("Type in your height in meters"));
+    //It will the calculate the BMI
+    var result = (weight / height) / height;
+    //round it to the nearest decimal place.
+    result = Math.round( result * 10 ) / 10;
+    //Display answer
+    alert(result);
+  }
+  //If the user enters bl, the basic long calculator function will be activated.
+  else if(answer == "i" || answer == "imperial"){
+    var weight = parseFloat(prompt("Type in your weight in pounds"));
+    var height = parseFloat(prompt("Type in your height in inches"));
+    //It will the calculate the BMI
+    var result = (weight * 703) / height;
+    //round it to the nearest decimal place.
+    result = Math.round( result * 10 ) / 10;
+    //Display answer
+    alert(result);
+  }
   //Call the choice function to start again.
   choice();
 }
