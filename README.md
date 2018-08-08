@@ -28,11 +28,11 @@ This feature asks the user for four inputs; distance, fuel efficiency (mpg), cos
 
 Note: For every 1 MPH over 60 MPH, reduce the the MPG by 2 MPG (i.e. a car that normally gets 30 mpg would only get 28 mpg if its speed were 61 mph. Yes this gets silly at high speed where mpg goes to zero or gets negative - how will you handle this?)
 
-Hints
+##### Hints
 Get user input - var hello = prompt("What is your name?")
 Output to console - console.log("Hello Sparta")
 
-Deliverables
+##### Deliverables
 Must meet DOF (Definition of Done)
 Must use Functions (DRY - Dont repeat yourself)
 Deliver code via link to pull request in Teams to Rich and Anthony
