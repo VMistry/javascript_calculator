@@ -38,30 +38,41 @@ function basic(){
   var operator = prompt("Enter operation");
   var number2 = parseInt(prompt("Enter second number"));
   //Find out if the operation is a +, -, * or divide.
-  if(operator == "+"){
-    console.log(number1 + number2);
-    alert(number1 + number2);
-  }
-  else if(operator == "-"){
-    console.log(number1 - number2);
-    alert(number1 - number2);
-  }
-  else if(operator == "*"){
-    console.log(number1 * number2);
-    alert(number1 * number2);
-  }
-  else if(operator == "/"){
-    console.log(number1 / number2);
-    //Display answer
-    alert(number1 / number2);
+  if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
+      number1 = operationSelector(number1, operator, number2);
   }
   //If it is none of the operations above, send error.
   else{
     console.log("Does not compute operator.");
     basic();
   }
+  alert(number1);
   //Call the choice function to start again.
   choice();
+}
+
+function operationSelector(number1, operator, number2){
+  //Find out if the operation is a +, -, * or divide.
+  if(operator == "+"){
+    console.log(number1 + number2);
+    //Display answer.
+    return number1 + number2;
+  }
+  else if(operator == "-"){
+    console.log(number1 - number2);
+    //Display answer.
+    return number1 - number2;
+  }
+  else if(operator == "*"){
+    console.log(number1 * number2);
+    //Display answer.
+    return number1 * number2;
+  }
+  else if(operator == "/"){
+    console.log(number1 / number2);
+    //Display answer.
+    return number1 / number2;
+  }
 }
 
 function basicLong(){
@@ -78,21 +89,9 @@ function basicLong(){
     //Below asks for an operation.
     operator = prompt("Enter an operation");
     //Find out if the operation is a +, -, * or divide.
-    if(operator == "+"){
-      number2 = parseInt(prompt("Enter a number"));
-      number1 += number2;
-    }
-    else if(operator == "-"){
-      number2 = parseInt(prompt("Enter a number"));
-      number1 -= number2;
-    }
-    else if(operator == "*"){
-      number2 = parseInt(prompt("Enter a number"));
-      number1 *= number2;
-    }
-    else if(operator == "/"){
-      number2 = parseInt(prompt("Enter a number"));
-      number1 /= number2;
+    if(operator == "+" || operator == "-" || operator == "*" || operator == "/"){
+        number2 = parseInt(prompt("Enter a number"));
+        number1 = operationSelector(number1, operator, number2);
     }
     //If the operation is equals, close the loop and show answer.
     else if(operator == "="){
@@ -109,6 +108,7 @@ function basicLong(){
   //Call the choice function to start again.
   choice();
 }
+
 
 
 function Advanced(){
