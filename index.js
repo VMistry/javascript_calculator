@@ -177,17 +177,28 @@ function BMI(){
 
 function Trip_calculator(){
   //Users are asked to insert distance travelled, fuel consumed and cost for fuel.
+
+
+
+
+
+
   var distance = parseFloat(prompt("Type in How far you travelled in kilometers"));
   var fuel_consumption = parseFloat(prompt("Type in your fuel consumption"));
   var cost = parseFloat(prompt("Type in how much per litres fuel costs"));
+  var speed = parseInt(prompt("How fast were you travelling (Miles per hour)?"));
+
   //Below does the calculation for travel costs.
-  var result = distance/100;
-  result = result * fuel_consumption;
-  result = result * cost;
+  var result1 = distance/100;
+  result1 = result1 * fuel_consumption;
+  result1 = result1 * cost;
   //round it to the nearest decimal place.
-  result = Math.round( result * 100 ) / 100;
+  result1 = Math.round( result1 * 100 ) / 100;
+
+  var result2 = distance/speed;
+  result2 = Math.round( result2 * 100 ) / 100;
   //Display answer
-  alert(result);
+  alert("The journey will cost £" + result1 + " and will take " + result2 + "hr");
   //Call the choice function to start again.
   choice();
 }
